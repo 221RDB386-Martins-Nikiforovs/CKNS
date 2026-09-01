@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:label="Ceļu defektu reģistrēšanas sistēma"
+        android:supportsRtl="true"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:roundIcon="@android:drawable/ic_menu_camera"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+<!--        Google Maps api key (NEPIECIEŠAMS, lai ielādētu Google karti)-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="__te_liekam__api_key__" />
+
+        <activity android:name=".TripMapActivity" />
+        <activity android:name=".TripListActivity" />
+        <activity android:name=".GpsTripListActivity" />
+        <activity android:name=".MbtilesPickerActivity" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".TripRecordingService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+    </application>
+
+</manifest>
