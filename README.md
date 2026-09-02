@@ -1,4 +1,4 @@
-Šī GitHub repozitorija satur bakalaura darba laikā izstrādātās ceļa seguma kvalitātes novērtēšanas sistēmas komponentes, kas netika ievietotas paša darba PDF faila pielikumu sadaļā.
+Šī GitHub repozitorija satur bakalaura darba laikā izstrādātās ceļa seguma kvalitātes novērtēšanas sistēmas komponentes, kas netika ievietotas paša darba PDF faila pielikumu sadaļā. Repozitorijas nosaukums "CKNS" lietots kā saīsinājums "Ceļu Kvalitātes Novērtēšanas Sistēma". Repozitorijas "main branch" atrodas visi, zemāk minētie, faili; savukārt "master branch" satur tikai lietotnes pirmkodu (Android Studio projektu eksportēšanas īpatnību dēļ tika veidots atsevišķs branch). Abu "branch" android leitotnes pirmkodi ir vieni un tie paši.
 
 Repozitorija satur:  
 ```      Kompilēto Android lietotni (ar "400px" ONNX modeli, jo tas testos uzrādīja vislielāko precizitāti);```    
